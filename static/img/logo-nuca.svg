@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 200">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5d93ce"/>
+      <stop offset="1" stop-color="#2e68ad"/>
+    </linearGradient>
+  </defs>
+  <path d="M90 4 160 44v82c0 35-28 55-70 70-42-15-70-35-70-70V44Z" fill="#fff" stroke="#fff" stroke-width="8"/>
+  <path d="M90 10 154 47v77c0 31-25 49-64 64-39-15-64-33-64-64V47Z" fill="url(#b)"/>
+  <g transform="translate(90 77)">
+    <g fill="none" stroke="#f5a54a" stroke-width="4">
+      <path d="M0-39c10 8 17 18 18 31C9-14 3-20 0-39Z"/>
+      <path d="M-12-36c3 12 2 24-5 34-4-10-5-21 5-34Z"/>
+      <path d="M-25-28c0 13 5 23 14 31-10-4-17-12-14-31Z"/>
+      <path d="M12-36c-3 12-2 24 5 34 4-10 5-21-5-34Z"/>
+      <path d="M25-28c0 13-5 23-14 31 10-4 17-12 14-31Z"/>
+      <circle cx="0" cy="0" r="29"/>
+    </g>
+    <path d="M-10-17c17 2 27 14 30 31-12-1-25-5-33-16-7-9-7-15 3-15Z" fill="#f2a561" opacity=".9"/>
+  </g>
+  <text x="90" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">selo unicef</text>
+  <text x="90" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" letter-spacing="5" fill="#fff">2025 • 2028</text>
+</svg>
