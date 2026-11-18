@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f8fb">
+  <meta name="description"
+    content="Assistente inteligente para descobrir ações, experiências e dados dos NUCAs do Selo UNICEF.">
+  <title>Converse com o NUCA | Selo UNICEF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Sobre o assistente">
+      <div class="sidebar-top">
+        <div class="signature"><span class="signature-dot"></span> SELO UNICEF</div>
+        <img class="sidebar-logo" src="{{ url_for('static', filename='img/image.png') }}" alt="Logo NUCA">
+        <h2>Histórias e dados dos NUCAs.</h2>
+        <p>Converse sobre o que adolescentes dos NUCAs estão realizando pelo Brasil.</p>
+      </div>
+      <div class="side-divider"></div>
+      <div class="side-label">O QUE VOCÊ PODE DESCOBRIR</div>
+      <div class="side-features">
+        <div><span class="feat-icon">↗</span><span>Experiências realizadas pelos adolescentes</span></div>
+        <div><span class="feat-icon">⌕</span><span>Temas, municípios e resultados</span></div>
+      </div>
+      <div class="sidebar-foot">Um espaço para conhecer e valorizar as iniciativas dos NUCAs.</div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div class="chat-brand">
+          <div class="bot-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 8h10M7 12h6M5 19l3.2-2H17a3 3 0 003-3V7a3 3 0 00-3-3H7a3 3 0 00-3 3v9c0 1 .3 2 .9 3z"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <div>
+            <div class="chat-title">Assistente NUCA</div>
+            <div class="chat-status"><span class="online-dot"></span><span id="statusText">Pronto para conversar</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="language-switch" role="group" aria-label="Idioma">
+            <button class="lang-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
+            <button class="lang-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="icon-button" id="resetButton" type="button" title="Nova conversa"
+            aria-label="Nova conversa"><svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg></button>
+        </div>
+      </header>
+
+      <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions">
+        <section class="welcome" id="welcomePanel">
+          <div class="welcome-orb"><img src="{{ url_for('static', filename='img/avatar-nuca.svg') }}" alt="" /></div>
+          <div class="eyebrow">SELO UNICEF · NUCAS</div>
+          <h1 id="welcomeTitle">O que você gostaria de descobrir?</h1>
+          <p id="welcomeSubtitle">Descubra iniciativas, compare resultados e conheça o trabalho dos adolescentes.
+            Pergunte do seu jeito.</p>
+          <div class="suggestions" id="suggestions">
+            <button type="button" class="suggestion" data-key="q1"><span class="suggestion-ico">✳</span><span
+                data-i18n="q1">Quais ações sobre "Resiliência Climática – #EntreNoClimaUNICEF" foram realizadas?</span><span
+                class="question-arrow">↗</span></button>
+            <button type="button" class="suggestion" data-key="q2"><span class="suggestion-ico">◉</span><span
+                data-i18n="q2">Quais os tipos de ações os NUCAs mais realizaram?</span><span
+                class="question-arrow">↗</span></button>
+            <button type="button" class="suggestion" data-key="q3"><span class="suggestion-ico">▥</span><span
+                data-i18n="q3">Quantas ações foram registradas no Brasil?</span><span
+                class="question-arrow">↗</span></button>
+            <button type="button" class="suggestion" data-key="q4"><span class="suggestion-ico">✦</span><span
+                data-i18n="q4">Me dê ideias para mobilizar adolescentes nos NUCAs.</span><span
+                class="question-arrow">↗</span></button>
+          </div>
+        </section>
+        <div class="messages" id="messages"></div>
+      </div>
+
+      <div class="compose-zone">
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="messageInput">Sua mensagem</label>
+          <textarea id="messageInput" rows="1" maxlength="1600"
+            placeholder="Pergunte sobre ações, municípios e resultados..." aria-label="Digite sua pergunta"></textarea>
+          <button class="send-button" id="sendButton" type="submit" title="Enviar" aria-label="Enviar">
+            <svg class="send-svg" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span class="stop-svg" aria-hidden="true">■</span>
+          </button>
+        </form>
+        <div class="composer-hint" id="composerHint">As respostas são baseadas nos registros dos NUCAs e podem conter
+          imprecisões.</div>
+      </div>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='js/chat.js') }}" defer></script>
+</body>
+
+</html>
