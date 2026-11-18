@@ -7,10 +7,10 @@ const i18n = {
     input:'Pergunte sobre ações, municípios ou resultados...',
     hint:'As respostas são baseadas nos registros dos NUCAs e podem conter imprecisões.',
     copy:'Copiar resposta',copied:'Copiado!',sources:'Registros relacionados',stop:'Interromper',send:'Enviar',
-    q1:'Quais ações sobre meio ambiente foram realizadas?',
-    q2:'Quais iniciativas os NUCAs realizaram em Pernambuco?',
+    q1:'Quais ações sobre #EntreNoClimaUNICEF foram realizadas?',
+    q2:'Quais os tipos de ações os NUCAs mais realizaram?',
     q3:'Quantas ações foram registradas no Brasil?',
-    q4:'Me dê ideias para mobilizar adolescentes.'
+    q4:'Me dê ideias para mobilizar adolescentes nos NUCAs.'
   },
   en: {
     title:'What would you like to discover?',
